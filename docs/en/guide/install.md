@@ -94,7 +94,3 @@ code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 * [🌐 OpenVSX Registry](https://open-vsx.org/extension/jensen-wen/i18n-mage)
 
 ---
-
-**⬅️ 返回：** [首页](zh/Home) | **➡️ 下一步：** [基础配置](zh/Getting-Started/Basic-Configuration)
-
-<!-- **🌐 Language:** [English](en/Getting-Started/Installation) | [中文](zh/Getting-Started/Installation) -->

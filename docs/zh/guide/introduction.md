@@ -45,14 +45,6 @@
 ### 📋 复制词条数据
 - 一键复制当前页词条键值对，便于模块迁移
 
-## 📖 文档目录
-
-- [🚀 快速开始](Getting-Started/Installation)
-- [✨ 功能详解](Features/Translation-Tree-View)
-- [⚙️ 配置详解](Configuration/General-Settings)
-- [🔧 高级用法](Advanced-Usage/Auto-translation-with-Variables)
-- [❓ 常见问题](FAQ/Translation-Services)
-
 ## 🔗 相关链接
 
 - [🐛 报告问题](https://github.com/baimohui/i18n-mage/issues)
