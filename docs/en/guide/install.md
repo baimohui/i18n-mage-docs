@@ -28,7 +28,6 @@
 3. 点击 **安装**
    或访问 [OpenVSX 页面](https://open-vsx.org/extension/jensen-wen/i18n-mage)
 
----
 
 ### 💻 方式二：通过命令行安装
 
@@ -44,7 +43,6 @@ code --install-extension jensen-wen.i18n-mage
 code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 ```
 
----
 
 ## 三、平台兼容与更新
 
@@ -53,7 +51,6 @@ code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 | **VS Code Marketplace** | Visual Studio Code、VS Code Insiders | 实时同步             | ✅ 支持      |
 | **OpenVSX Registry**    | VSCodium、Cursor 等开源编辑器              | 与 Marketplace 同步 | ⚙️ 取决于编辑器 |
 
----
 
 ## 四、验证安装是否成功
 
@@ -69,7 +66,6 @@ code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 
 * `i18n Mage: refresh`：检测词条信息
 
----
 
 ## 五、安装问题排查
 
@@ -80,17 +76,8 @@ code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 3. **查看日志**：打开“输出”面板，选择“i18n Mage”
 4. **反馈问题**：[在 GitHub 提交 Issue](https://github.com/jensen-wen/i18n-mage/issues)
 
----
-
-## 六、下一步
-
-➡️ [基础配置](Basic-Configuration)
-
----
 
 ## 🔗 官方安装链接
 
 * [⭐ VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jensen-wen.i18n-mage)
 * [🌐 OpenVSX Registry](https://open-vsx.org/extension/jensen-wen/i18n-mage)
-
----
