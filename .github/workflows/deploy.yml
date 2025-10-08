@@ -1,46 +1,54 @@
-name: Deploy VitePress site to GitHub Pages
+name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches:
-      - main # 当你推送或合并到 main 时自动部署
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: write # 允许推送到 gh-pages 分支
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 设置 pnpm（识别 pnpm-lock.yaml）
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 9 # 请与你本地版本一致
+          version: 9
 
-      # 设置 Node.js 版本
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
 
-      # 安装依赖
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # 构建 VitePress 静态文件
       - name: Build site
         run: pnpm run docs:build
 
-      # 部署到 gh-pages 分支
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
-          publish_branch: gh-pages
+          path: docs/.vitepress/dist # 这里是正确的路径
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
