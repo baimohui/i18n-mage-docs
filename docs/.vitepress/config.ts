@@ -59,10 +59,19 @@ export default defineConfig({
                 { text: "快速上手", link: "/zh/guide/quick-start" },
               ],
             },
-            // {
-            //   text: "功能",
-            //   items: [],
-            // },
+            {
+              text: "功能",
+              items: [
+                {
+                  text: "补充缺失翻译",
+                  link: "/zh/features/fill-missing-translations",
+                },
+                {
+                  text: "修复未定义词条",
+                  link: "/zh/features/fix-undefined-entries",
+                },
+              ],
+            },
             {
               text: "配置",
               items: [

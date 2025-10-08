@@ -38,3 +38,34 @@
    - **百度翻译**：需要 [APP ID 和密钥](https://fanyi-api.baidu.com/)
    - **腾讯翻译**：需要 [SecretId 和 SecretKey](https://console.cloud.tencent.com/cam)
    - **DeepSeek**：需要 [API Key](https://platform.deepseek.com/)
+
+## 四、更多配置
+
+插件提供超过 70 项配置项，主要分为以下几类：
+
+- 通用设置（启用插件、显示语言等）
+- 国际化框架支持（翻译函数名、命名空间、插值样式等）
+- 翻译服务（密钥、翻译源语言、启用未定义词条修复等）
+- 检查规则（扫描文件、启用自动分析等）
+- 写入规则（key 风格、引号样式、缩进等）
+- 内联提示样式（颜色、最大展示字符数等）
+- 自动补全（补全规则等）
+- 工作区配置（项目路径、忽略目录、忽略语言文件等）
+
+📌 可通过 VS Code 设置面板统一管理，也支持 `.vscode/settings.json` 中单独配置。
+
+📘 全部配置项请参阅 [完整配置文档](../config/general.md)
+
+## 五、命令与快捷键
+
+| 命令 ID                            | 功能说明           | 快捷键     |
+| ---------------------------------- | ------------------ | ---------- |
+| `i18nMage.check`                   | 检测词条信息       | Ctrl+Alt+C |
+| `i18nMage.fix`                     | 一键修复           | Ctrl+Alt+F |
+| `i18nMage.toggleInlineTranslation` | 切换翻译内联提示   | Ctrl+Alt+D |
+| `i18nMage.export`                  | 导出词条为 Excel   | -          |
+| `i18nMage.import`                  | 从 Excel 导入词条  | -          |
+| `i18nMage.sort`                    | 对语言文件词条排序 | -          |
+| ...                                | ...                | ...        |
+
+> 💡 全部命令可通过命令面板（Ctrl+Shift+P）调用。
