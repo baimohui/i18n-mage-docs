@@ -7,9 +7,9 @@
 
 语言文件写入时的排序规则（仅对扁平结构生效），支持以下选项：
 
-- `none`：不排序。
-- `byKey`: 按词条键名首字母排序。
-- `byPosition`: 按词条首次出现的源文件位置排序。
+- `none`：不排序
+- `byKey`: 按词条键名首字母排序
+- `byPosition`: 按词条首次出现的源文件位置排序
 
 ## `i18n-mage.writeRules.sortAfterFix`
 

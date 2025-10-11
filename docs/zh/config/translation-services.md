@@ -24,7 +24,7 @@
 ## `i18n-mage.translationServices.unmatchedLanguageAction`
 
 - **类型**：`string`
-- **默认值**：`ignore`
+- **默认值**：`query`
 
 设置翻译前语言校验失败时的处理方式，支持以下选项：
 
