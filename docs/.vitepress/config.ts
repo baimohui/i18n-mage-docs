@@ -4,6 +4,7 @@ export default defineConfig({
   title: "i18n Mage",
   description: "Your multilingual assistant for VS Code projects.",
   base: "/i18n-mage-docs/", // ← 如果部署在子路径
+  head: [["link", { rel: "icon", href: "/i18n-mage-docs/favicon.ico" }]],
 
   locales: {
     // --- 英文站 ---
