@@ -78,7 +78,7 @@
 ## `i18n-mage.translationServices.translateApiPriority`
 
 - **类型**：`array`
-- **默认值**：`[ "deepl", "deepseek", "baidu", "tencent", "google" ]`
+- **默认值**：`[ "deepl", "chatgpt", "deepseek", "baidu", "tencent", "youdao", "google" ]`
 
 设置使用的翻译服务及优先级。如果调用某个翻译平台时出现异常，插件会自动切换到下一个可用的翻译平台。
 
@@ -95,6 +95,20 @@
 - **默认值**：`""`
 
 设置 DeepL 翻译 API 密钥。
+
+## `i18n-mage.translationServices.googleApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置 Google 翻译 API 密钥。
+
+## `i18n-mage.translationServices.chatgptApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置 ChatGPT API 密钥。
 
 ## `i18n-mage.translationServices.deepseekApiKey`
 
@@ -130,4 +144,18 @@
 - **默认值**：`""`
 
 设置腾讯云平台账号 SecretKey。
+
+## `i18n-mage.translationServices.youdaoAppId`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置有道翻译开放平台开发者 APP ID。
+
+## `i18n-mage.translationServices.youdaoAppKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置有道翻译开放平台 APP 密钥。
 

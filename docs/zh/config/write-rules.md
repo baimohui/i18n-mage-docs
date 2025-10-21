@@ -21,7 +21,7 @@
 ## `i18n-mage.writeRules.keyPrefix`
 
 - **类型**：`enum`
-- **默认值**：`none`
+- **默认值**：`manual-selection`
 
 用于生成 key 的前缀，支持以下选项：
 
@@ -52,12 +52,23 @@
 - `kebab-case`：短横线式
 - `raw`：保持原样
 
-## `i18n-mage.writeRules.languageFileIndent`
+## `i18n-mage.writeRules.indentType`
+
+- **类型**：`enum`
+- **默认值**：`space`
+
+写入语言文件时使用的缩进类型，支持以下选项：
+
+- `auto`：自动检测
+- `space`：空格
+- `tab`：制表符
+
+## `i18n-mage.writeRules.indentSize`
 
 - **类型**：`number`
 - **默认值**：`null`
 
-写入语言文件时使用的缩进空格数。若未设置，将自动根据现有文件内容推断缩进大小。
+缩进宽度，未设置时自动推断（当 indentType 为 'space' 时表示空格数，为 'tab' 时通常为 1）。
 
 ## `i18n-mage.writeRules.maxGeneratedKeyLength`
 

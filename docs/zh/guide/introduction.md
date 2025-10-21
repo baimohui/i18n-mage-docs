@@ -31,7 +31,7 @@
 ![补全代码](./images/completion.gif)
 
 ### 🚧 缺漏翻译补充
-- 集成 DeepL、谷歌、百度、腾讯、DeepSeek 翻译服务
+- 集成 DeepL、谷歌、百度、腾讯、有道、DeepSeek、ChatGPT 翻译服务
 - 自动补充缺失翻译，支持预览与人工校验
 
 ![补全缺漏翻译](./images/fill-missing-translations.gif)
