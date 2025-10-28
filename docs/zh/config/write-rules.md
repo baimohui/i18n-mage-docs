@@ -29,7 +29,7 @@
 - `manual-selection`：手动选择前缀
 - `auto-popular`：自动选择最常见前缀
 
-## `i18n-mage.writeRules.generatedKeyStrategy`
+## `i18n-mage.writeRules.keyStrategy`
 
 - **类型**：`enum`
 - **默认值**：`english`
@@ -39,7 +39,7 @@
 - `english`：使用英文翻译生成 key（非英文文案会调用翻译服务）
 - `pinyin`：使用拼音生成 key
 
-## `i18n-mage.writeRules.generatedKeyStyle`
+## `i18n-mage.writeRules.keyStyle`
 
 - **类型**：`enum`
 - **默认值**：`camelCase`
@@ -70,12 +70,22 @@
 
 缩进宽度，未设置时自动推断（当 indentType 为 'space' 时表示空格数，为 'tab' 时通常为 1）。
 
-## `i18n-mage.writeRules.maxGeneratedKeyLength`
+## `i18n-mage.writeRules.maxKeyLength`
 
 - **类型**：`number`
 - **默认值**：`40`
 
 生成的 key 的最大长度。超出限制时，将使用“文件名 + Text + 序号”的形式生成 key。若仍超出限制，将截断文件名以满足长度要求。
+
+## `i18n-mage.writeRules.invalidKeyStrategy`
+
+- **类型**：`enum`
+- **默认值**：`ai`
+
+当生成的词条 key 无效（为空或超出最大长度）时使用的回退策略。支持以下选项：
+
+- `fallback`：使用默认回退策略，即 \"文件名+text+ 数字\" 的形式，例如 appText01
+- `ai`：调用已配置的 AI 服务生成有效的词条 key
 
 ## `i18n-mage.writeRules.quoteStyleForKey`
 
