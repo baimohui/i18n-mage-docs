@@ -3,15 +3,16 @@
 ## `i18n-mage.i18nFeatures.framework`
 
 - **类型**: `enum`
-- **默认值**: `none`
+- **默认值**: `auto`
 
 选择使用的国际化框架：如 `vue-i18n`、`react-i18next` 等。支持以下选项：
 
-- `none`: 不使用框架，仅使用原生国际化 API
+- `auto`: 自动检测项目使用的国际化框架
 - `vue-i18n`: 使用 `vue-i18n` 框架
 - `react-i18next`: 使用 `react-i18next` 框架
 - `i18next`: 使用 `i18next` 框架（目前选择该项与 `react-i18next` 效果相同）
 - ~~`vscode-l10n`: 使用 `vscode-l10n` 框架~~
+- `none`: 不使用框架
 
 ## `i18n-mage.i18nFeatures.translationFunctionNames`
 
