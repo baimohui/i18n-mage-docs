@@ -71,6 +71,10 @@ export default defineConfig({
                   text: "修复未定义词条",
                   link: "/zh/features/fix-undefined-entries",
                 },
+                {
+                  text: "检测词条使用率",
+                  link: "/zh/features/check-usage",
+                },
               ],
             },
             {
