@@ -61,6 +61,10 @@
 
 ![复制词条数据](./images/copy-entries.gif)
 
+## 🎉 感谢支持
+
+如果这个插件对你带来了帮助，欢迎到 [GitHub 仓库](https://github.com/baimohui/i18n-mage) 点个 ⭐ 支持一下！
+
 ## 🔗 相关链接
 
 - [🐛 报告问题](https://github.com/baimohui/i18n-mage/issues)
@@ -74,8 +78,8 @@
 git clone https://github.com/baimohui/i18n-mage.git
 cd i18n-mage
 npm install
-npm run check
-npm run build
+# f5 调试
+npm run package
 ```
 
 欢迎提交 issue 或 PR！
