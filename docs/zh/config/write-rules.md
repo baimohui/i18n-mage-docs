@@ -18,6 +18,24 @@
 
 修复时是否对词条进行排序。
 
+## `i18n-mage.writeRules.languageStructure`
+
+- **类型**：`enum`
+- **默认值**：`auto`
+
+语言文件结构，支持以下选项：
+
+- `auto`：自动检测
+- `nested`：嵌套结构
+- `flat`：扁平结构
+
+## `i18n-mage.writeRules.allowDotInNestedKey`
+
+- **类型**：`boolean`
+- **默认值**：`true`
+
+是否允许在嵌套结构中使用点号（`.`）作为 key 的分隔符。
+
 ## `i18n-mage.writeRules.keyPrefix`
 
 - **类型**：`enum`
@@ -28,6 +46,7 @@
 - `none`：不添加前缀
 - `manual-selection`：手动选择前缀
 - `auto-popular`：自动选择最常见前缀
+- `auto-path`：使用文件路径生成前缀
 
 ## `i18n-mage.writeRules.keyStrategy`
 
@@ -116,6 +135,13 @@
 - **默认值**：`["the"]`
 
 停用词列表，用于生成 key 时剔除多余的无效词汇。
+
+## `i18n-mage.writeRules.stopPrefixes`
+
+- **类型**：`array`
+- **默认值**：`[]`
+
+停用词前缀列表，用于生成 key 时剔除多余的无效词汇前缀。
 
 ## `i18n-mage.writeRules.enableKeyTagRule` (Deprecated)️
 
