@@ -63,6 +63,9 @@
 | `i18nMage.check`                   | 检测词条信息       | Ctrl+Alt+C |
 | `i18nMage.fix`                     | 一键修复           | Ctrl+Alt+F |
 | `i18nMage.toggleInlineTranslation` | 切换翻译内联提示   | Ctrl+Alt+D |
+| `i18nMage.browseTranslationsInFile`| 速览当前文件翻译   | Ctrl+Alt+T |
+| `i18nMage.goToDefinition`          | 跳转到词条源文件位置 | f12       |
+| -                                  | 重构键名          | f2         |
 | `i18nMage.export`                  | 导出词条为 Excel   | -          |
 | `i18nMage.import`                  | 从 Excel 导入词条  | -          |
 | `i18nMage.sort`                    | 对语言文件词条排序 | -          |
