@@ -75,3 +75,20 @@
 - **默认值**: `translation`
 
 指定默认命名空间，用于简化像 react-i18next 和 i18next 等框架中的 t 函数调用。若未显式指定命名空间，系统将默认使用此命名空间。请确保该命名空间已正确加载。
+
+## `i18n-mage.i18nFeatures.accessMode`
+
+- **类型**: `enum`
+- **默认值**: `function`
+
+翻译访问方式。支持以下选项：
+
+- `function`: 使用函数调用方式，如 `t('key')`
+- `object`: 使用对象访问方式，如 `t.key`
+
+## `i18n-mage.i18nFeatures.translationObjectIdentifiers`
+
+- **类型**: `array`
+- **默认值**: `[]`
+
+使用对象的方式来访问翻译时，承载翻译数据的对象标识符。
