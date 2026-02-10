@@ -117,6 +117,13 @@
 
 设置 DeepSeek 翻译 API 密钥。
 
+## `i18n-mage.translationServices.aiCustomPrompt`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置自定义 AI 翻译提示词。
+
 ## `i18n-mage.translationServices.baiduAppId`
 
 - **类型**：`string`
