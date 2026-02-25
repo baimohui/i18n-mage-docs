@@ -85,9 +85,12 @@
 ## `i18n-mage.translationServices.deeplVersion`
 
 - **类型**：`string`
-- **默认值**：`""`
+- **默认值**：`free`
 
 设置 DeepL 翻译 API 版本。
+
+- `free`：DeepL 免费版
+- `pro`：DeepL 专业版
 
 ## `i18n-mage.translationServices.deeplApiKey`
 
@@ -103,12 +106,12 @@
 
 设置 Google 翻译 API 密钥。
 
-## `i18n-mage.translationServices.chatgptApiKey`
+## `i18n-mage.translationServices.openaiApiKey`
 
 - **类型**：`string`
 - **默认值**：`""`
 
-设置 ChatGPT API 密钥。
+设置 OpenAI API 密钥（用于 ChatGPT 翻译与 AI 生成 key 能力）。
 
 ## `i18n-mage.translationServices.deepseekApiKey`
 
@@ -116,13 +119,6 @@
 - **默认值**：`""`
 
 设置 DeepSeek 翻译 API 密钥。
-
-## `i18n-mage.translationServices.aiCustomPrompt`
-
-- **类型**：`string`
-- **默认值**：`""`
-
-设置自定义 AI 翻译提示词。
 
 ## `i18n-mage.translationServices.baiduAppId`
 
@@ -165,4 +161,43 @@
 - **默认值**：`""`
 
 设置有道翻译开放平台 APP 密钥。
+
+## `i18n-mage.translationServices.proxy.enable`
+
+- **类型**：`boolean`
+- **默认值**：`false`
+
+是否为翻译服务启用代理（适用于公司网络、地区网络限制或本地代理场景）。
+
+## `i18n-mage.translationServices.proxy.host`
+
+- **类型**：`string`
+- **默认值**：`127.0.0.1`
+
+代理服务器地址。常见为本机代理 `127.0.0.1`，也可填写局域网代理地址。
+
+## `i18n-mage.translationServices.proxy.port`
+
+- **类型**：`number`
+- **默认值**：`7890`
+
+代理端口号。
+
+## `i18n-mage.translationServices.proxy.protocol`
+
+- **类型**：`enum`
+- **默认值**：`http`
+
+代理协议类型，支持：
+
+- `http`
+- `https`
+
+## `i18n-mage.translationServices.aiCustomPrompt`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+追加给 AI 翻译上下文的自定义提示词。可用于约束语气、专业术语、品牌词和风格一致性。  
+建议写成简洁规则，例如：“保留变量占位符，不要翻译品牌名，偏产品文案语气”。
 

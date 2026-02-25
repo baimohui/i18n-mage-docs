@@ -1,83 +1,80 @@
-# 📥 安装指南
+﻿# Installation Guide
 
-## 一、前置要求
+## Prerequisites
 
-在安装前，请确保：
+Before installing, make sure:
 
-* VS Code 版本 ≥ **1.89.0**
-* 语言文件格式为 **JSON / JSON5 / JS / TS**
+- VS Code version is **>= 1.89.0**
+- Your project has an accessible language file directory (for example `locales/` or `i18n/`)
 
----
+## Installation Methods
 
-## 二、安装方式
-
-### ✅ 方式一：通过扩展市场安装
+### Method 1: Install from Extension Marketplace
 
 #### VS Code Marketplace
 
-1. 打开 VS Code
-2. 打开扩展面板（快捷键：`Ctrl+Shift+X` / `Cmd+Shift+X`）
-3. 搜索 `i18n Mage`
-4. 点击 **安装**
-   或访问 [Visual Studio Marketplace 页面](https://marketplace.visualstudio.com/items?itemName=jensen-wen.i18n-mage)
+1. Open VS Code.
+2. Open Extensions panel (`Ctrl+Shift+X` / `Cmd+Shift+X`).
+3. Search for `i18n Mage`.
+4. Click **Install**.
+   Or open [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jensen-wen.i18n-mage).
 
-#### OpenVSX 平台（适用于 VSCodium、Cursor 等）
+#### OpenVSX (for VSCodium, Cursor, etc.)
 
-1. 打开编辑器扩展面板
-2. 搜索 `i18n Mage`
-3. 点击 **安装**
-   或访问 [OpenVSX 页面](https://open-vsx.org/extension/jensen-wen/i18n-mage)
+1. Open Extensions panel in your editor.
+2. Search for `i18n Mage`.
+3. Click **Install**.
+   Or open [OpenVSX](https://open-vsx.org/extension/jensen-wen/i18n-mage).
 
+### Method 2: Install via CLI
 
-### 💻 方式二：通过命令行安装
-
-#### 从 VS Code Marketplace 安装
+#### Install from VS Code Marketplace
 
 ```bash
 code --install-extension jensen-wen.i18n-mage
 ```
 
-#### 从 OpenVSX Registry 安装
+#### Install from OpenVSX Registry
 
 ```bash
 code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 ```
 
+## Platform Compatibility and Updates
 
-## 三、平台兼容与更新
+| Platform | Editors | Update Frequency | Auto Update |
+| --- | --- | --- | --- |
+| **VS Code Marketplace** | Visual Studio Code, VS Code Insiders | Real-time sync | Yes |
+| **OpenVSX Registry** | VSCodium, Cursor, and other OSS editors | Synced with Marketplace | Depends on editor |
 
-| 平台                      | 适用编辑器                               | 更新频率             | 自动更新      |
-| ----------------------- | ----------------------------------- | ---------------- | --------- |
-| **VS Code Marketplace** | Visual Studio Code、VS Code Insiders | 实时同步             | ✅ 支持      |
-| **OpenVSX Registry**    | VSCodium、Cursor 等开源编辑器              | 与 Marketplace 同步 | ⚙️ 取决于编辑器 |
+## Verify Installation
 
+After installation, you should see:
 
-## 四、验证安装是否成功
+1. **Activity Bar Icon**: wizard-hat icon appears.
+2. **Command Palette**: `Ctrl+Shift+P` can find i18n Mage commands.
+3. **Sidebar View**: `i18n Mage / Grimoire` panel is available.
 
-安装成功后，你应能看到以下变化：
+### Quick Verification Commands
 
-1. **活动栏图标**：出现巫师帽 🧙‍♂️ 图标
-2. **命令面板**：`Ctrl+Shift+P` 可搜索到 i18n Mage 命令
-3. **状态栏**：显示 i18n Mage 语言状态指示器（如已启用）
+Open Command Palette (`Ctrl+Shift+P`) and run:
 
-### 快速验证命令
+- `i18n Mage: Check Usage`
+- `i18n Mage: Search`
+- `i18n Mage: Fix`
 
-打开命令面板（`Ctrl+Shift+P`），输入以下命令以测试：
+## Troubleshooting
 
-* `i18n Mage: refresh`：检测词条信息
+If installation fails or features do not work as expected:
 
+1. Restart your editor.
+2. Confirm VS Code version is `>= 1.89.0`.
+3. Check language path config (`i18n-mage.workspace.languagePath`).
+4. Open Output panel and switch to `i18n Mage`.
+5. Temporarily enable `i18n-mage.general.enableDebugLog` and retry.
+6. [Open an issue on GitHub](https://github.com/baimohui/i18n-mage/issues).
 
-## 五、安装问题排查
+## Official Links
 
-如果安装失败或功能异常，可尝试以下步骤：
-
-1. **重启编辑器**
-2. **检查版本**：确认 VS Code ≥ 1.89.0
-3. **查看日志**：打开“输出”面板，选择“i18n Mage”
-4. **反馈问题**：[在 GitHub 提交 Issue](https://github.com/jensen-wen/i18n-mage/issues)
-
-
-## 🔗 官方安装链接
-
-* [⭐ VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jensen-wen.i18n-mage)
-* [🌐 OpenVSX Registry](https://open-vsx.org/extension/jensen-wen/i18n-mage)
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jensen-wen.i18n-mage)
+- [OpenVSX Registry](https://open-vsx.org/extension/jensen-wen/i18n-mage)

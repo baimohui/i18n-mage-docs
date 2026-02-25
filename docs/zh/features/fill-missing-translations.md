@@ -1,87 +1,89 @@
-# 🚧 缺失翻译补全
+# 🌍 缺失翻译补充
 
-在多语言项目中，维护翻译文件最常见的问题之一就是 **某些语言缺少对应的词条**。
-i18n Mage 提供了强大的「缺失翻译补全」功能，帮助你 **自动识别并一键补全缺失内容**，同时支持人工审核和灵活控制。
+## 功能作用
 
+当某个词条在“翻译源语言”里有值，但在其他语言里缺失或为空时，i18n Mage 可以批量补全这些翻译内容。  
+这个功能主要用于：
 
-## ✨ 功能概览
+- 新增语言后的一次性补全
+- 日常开发中持续补齐遗漏翻译
+- 修复“缺失 + 空值”词条，保持多语言一致性
 
-* 🔍 **自动检测缺失翻译**：扫描所有语言文件，智能识别缺失的词条。
-* 🌍 **多翻译源支持**：内置 DeepL、Google、百度、腾讯、DeepSeek 等翻译服务。
-* 🧩 **灵活的补全范围**：
+## 触发方式
 
-  * 可选择 **特定语言** 进行补全；
-  * 仅补全部分 **词条**；
-  * 或直接 **一次性补全所有缺失内容**。
-* 🪄 **可视化预览与修改**：在操作前预览翻译结果，并可手动调整。
-* ⚙️ **智能过滤与校验**：支持在翻译前对源语言进行检测，自动跳过变量、非源语言内容等无效项。
+### 方式一：全局补全（推荐）
 
-## 👜 先决条件
+- 点击侧边栏顶部 `修复`
+- 或命令面板执行 `i18n Mage: Fix`
+- 快捷键：
+  - Windows / Linux: `Ctrl+Alt+F`
+  - macOS: `Cmd+Alt+F`
 
-### 1. 基础配置
+说明：`Fix` 是组合能力，除了能够补充缺失翻译外，还支持修复未定义词条。其中缺失翻译部分会自动执行补全。
 
-在使用补充缺失翻译功能前，需要完成以下配置：
+### 方式二：按范围补全
 
-**设置翻译源语言**
-- 在侧边栏的"同步信息"面板中，右键点击某个语言项，选择"设为翻译源语言"  
-- 或在设置中配置 `i18n-mage.translationServices.referenceLanguage`  
+- 在树视图中，对某个“缺失/空值”分组或具体词条执行 `填充缺失翻译`
+- 这种方式会只处理当前选中的范围（可限定到某个语言或某些 key）
 
-**配置翻译服务**
-- 根据选择的翻译服务，配置相应的 API 密钥：
-  - DeepL: `i18n-mage.translationServices.deeplApiKey`  
-  - Google: `i18n-mage.translationServices.googleApiKey`  
-  - ChatGPT: `i18n-mage.translationServices.chatgptApiKey`  
-  - DeepSeek: `i18n-mage.translationServices.deepseekApiKey`  
-  - 百度翻译：`i18n-mage.translationServices.baiduAppId` 和 `baiduSecretKey`  
-  - 腾讯翻译：`i18n-mage.translationServices.tencentSecretId` 和 `tencentSecretKey`  
+![按范围补全](./images/fill-part-missing.png)
 
-**设置翻译服务优先级**
-- 配置 `i18n-mage.translationServices.translateApiPriority` 来指定使用的翻译服务及其优先级  
-- 如果某个翻译服务调用失败，插件会自动切换到下一个可用的服务  
+## 开始前配置
 
-### 2. 可选配置
+### 1. 必要配置
 
-**自动翻译空值词条**
-- 启用 `i18n-mage.translationServices.autoTranslateEmptyKey` 可以在修复时同时翻译空值词条  
+- `i18n-mage.translationServices.referenceLanguage`  
+  设置翻译源语言（补全时从该语言取原文）。
 
-**语言验证**
-- 启用 `i18n-mage.translationServices.validateLanguageBeforeTranslate` 可以在翻译前验证文本是否属于源语言  
-- 配置 `i18n-mage.translationServices.unmatchedLanguageAction` 来设置验证失败时的处理方式：
-  - `ignore`: 忽略该文本，不进行翻译  
-  - `force`: 继续以源语言进行翻译  
-  - `fill`: 不翻译，直接用原文填充所有语言  
-  - `switch`: 手动切换到其他源语言  
-  - `query`: 每次弹出选择框让用户手动选择 
+- `i18n-mage.translationServices.translateApiPriority`  
+  设置翻译服务优先级，前面的服务失败会自动回退到下一个。
 
+- 至少配置一个可用翻译服务密钥（按你使用的平台选择）：
+  - `i18n-mage.translationServices.deeplApiKey`
+  - `i18n-mage.translationServices.googleApiKey`
+  - `i18n-mage.translationServices.openaiApiKey`
+  - `i18n-mage.translationServices.deepseekApiKey`
+  - `i18n-mage.translationServices.baiduAppId` + `i18n-mage.translationServices.baiduSecretKey`
+  - `i18n-mage.translationServices.tencentSecretId` + `i18n-mage.translationServices.tencentSecretKey`
+  - `i18n-mage.translationServices.youdaoAppId` + `i18n-mage.translationServices.youdaoAppKey`
 
-## 🚀 使用步骤
+### 2. 常用可选配置
 
-### 方式一：全局补充缺失翻译
+- `i18n-mage.translationServices.autoTranslateEmptyKey`  
+  开启后会把“空值词条”也纳入补全，不只处理“完全缺失”。
 
-1. **触发修复命令**
-   - 点击侧边栏顶部的"修复"按钮  
-   - 或使用快捷键 `Ctrl+Alt+F` (Windows/Linux) / `Cmd+Alt+F` (Mac)  
-   - 或在命令面板中执行 `i18n Mage: Fix`  
+- `i18n-mage.translationServices.validateLanguageBeforeTranslate`  
+  翻译前校验源文本语言，避免把非源语言文本当作源文本翻译。
 
-2. **处理非源语言文本**(如果启用了语言验证)
-   - 如果源语言文件中存在非源语言的文本，插件会根据 `unmatchedLanguageAction` 配置进行处理  
-   - 如果设置为 `query`,会弹出选择框让你选择处理方式  
+- `i18n-mage.translationServices.unmatchedLanguageAction`  
+  当语言校验失败时的处理策略：`ignore` / `force` / `fill` / `switch` / `query`。
 
-3. **翻译执行**
-   - 插件会调用配置的翻译服务，为每个缺失的语言生成翻译  
-   - 翻译过程中会显示进度条，包含当前翻译的语言和新增的翻译数量  
+- `i18n-mage.general.previewChanges`  
+  是否在真正写入前展示预览，建议开启。
 
-4. **预览和确认**(如果启用了预览)
-   - 如果启用了 `i18n-mage.general.previewChanges`,会显示待应用的更改  
-   - 可以在预览界面中确认或调整更改后再应用 
+- `i18n-mage.translationServices.proxy.enable`、`proxy.host`、`proxy.port`、`proxy.protocol`  
+  需要代理网络时启用。
 
-### 方式二：针对特定范围补充翻译
+- `i18n-mage.translationServices.aiCustomPrompt`  
+  对 AI 翻译附加额外约束（术语、语气、品牌词等）。
 
-1. **在同步信息面板中操作**
-   - 展开"同步信息"面板，找到需要补充翻译的语言
-   - 展开该语言，可以看到"缺失"和"空值"两个类别
-   - 点击某个词条或类别项的修复按钮来填充缺失翻译
+## 实际执行流程
 
-2. **翻译执行**
-   - 插件会仅为选中的词条或语言范围生成翻译 
+1. 插件先扫描缺失词条（若开启 `autoTranslateEmptyKey`，也会包含空值词条）。
+2. 以 `referenceLanguage` 对应文案作为源文本。
+3. 按 `translateApiPriority` 依次调用翻译服务。
+4. 生成待写入变更（按语言、按 key）。
+5. 若开启 `previewChanges`，先预览确认；确认后写入语言文件。
 
+![补充缺失翻译](../guide/images/fill-missing-translations.gif)
+
+## 常见问题
+
+- 为什么有些 key 没被补全？  
+  常见原因是源语言本身没有值，或被你本次选择范围排除了。
+
+- 为什么提示翻译失败？  
+  通常是 API Key 无效、额度不足、网络不可达或该服务暂时异常。可调整 `translateApiPriority` 让插件自动切换到下一个服务。
+
+- 为什么没有弹出预览？  
+  检查 `i18n-mage.general.previewChanges` 是否关闭。

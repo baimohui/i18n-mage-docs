@@ -17,6 +17,23 @@
 - `overlay`：将翻译文本覆盖显示在原始文本上
 - `inline`：将翻译文本与原始文本并行显示
 
+## `i18n-mage.translationHints.decorationScope`
+
+- **类型**：`enum`
+- **默认值**：`visible`
+
+设置翻译装饰的应用范围：
+
+- `visible`：仅当前可见区域（性能更好，推荐）
+- `file`：整个文件（滚动到任意位置都可直接看到装饰）
+
+## `i18n-mage.translationHints.realtimeVisibleRangeUpdate`
+
+- **类型**：`boolean`
+- **默认值**：`false`
+
+在 `decorationScope = visible` 时，滚动编辑器是否立即刷新可见区域的装饰。开启后体验更实时，但会增加 CPU 开销。
+
 ## `i18n-mage.translationHints.applyToStringLiterals`
 
 - **类型**：`boolean`
@@ -52,7 +69,7 @@
 
 设置浅色主题下提示文字颜色（十六进制）。
 
-## `translationHints.light.backgroundColor`
+## `i18n-mage.translationHints.light.backgroundColor`
 
 - **类型**：`string`
 - **默认值**：`#9EC9D7`

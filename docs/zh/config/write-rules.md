@@ -23,18 +23,19 @@
 - **类型**：`enum`
 - **默认值**：`auto`
 
-语言文件结构，支持以下选项：
+设置语言文件结构，支持以下选项：
 
-- `auto`：自动检测
-- `nested`：嵌套结构
-- `flat`：扁平结构
+- `auto`：自动推断当前项目使用的结构
+- `nested`：嵌套结构（如 `common.button.ok` 写入为多层对象）
+- `flat`：扁平结构（如 `common.button.ok` 作为单层 key）
 
 ## `i18n-mage.writeRules.allowDotInNestedKey`
 
 - **类型**：`boolean`
 - **默认值**：`true`
 
-是否允许在嵌套结构中使用点号（`.`）作为 key 的分隔符。
+当 `languageStructure = nested` 时，是否允许 key 中保留 `.`。  
+关闭后，点号会被视为路径分隔符并展开成对象层级。
 
 ## `i18n-mage.writeRules.keyPrefix`
 
@@ -45,8 +46,8 @@
 
 - `none`：不添加前缀
 - `manual-selection`：手动选择前缀
+- `auto-path`：根据文件路径自动生成前缀
 - `auto-popular`：自动选择最常见前缀
-- `auto-path`：使用文件路径生成前缀
 
 ## `i18n-mage.writeRules.keyStrategy`
 
@@ -74,7 +75,7 @@
 ## `i18n-mage.writeRules.indentType`
 
 - **类型**：`enum`
-- **默认值**：`space`
+- **默认值**：`auto`
 
 写入语言文件时使用的缩进类型，支持以下选项：
 
@@ -141,7 +142,8 @@
 - **类型**：`array`
 - **默认值**：`[]`
 
-停用词前缀列表，用于生成 key 时剔除多余的无效词汇前缀。
+路径前缀过滤列表。  
+当 `keyPrefix = auto-path` 时，插件会从文件路径生成前缀，并先移除这里配置的前缀段，避免生成冗长或无意义的 key 前缀（例如 `src`、`pages`、`modules`）。
 
 ## `i18n-mage.writeRules.enableKeyTagRule` (Deprecated)️
 

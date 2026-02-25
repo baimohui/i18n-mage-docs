@@ -1,15 +1,11 @@
 # 检查规则配置
 
-## `i18n-mage.analysis.languageFileParser`
+## `i18n-mage.analysis.fileExtensions`
 
-- **类型**：`enum`
-- **默认值**：`auto`
+- **类型**：`array`
+- **默认值**：`[ ".js", ".ts", ".jsx", ".tsx", ".vue", ".html" ]`
 
-用于选择语言文件的解析方式，支持以下选项：
-
-- `json5`：JSON5 解析器（严格但安全）
-- `eval`：eval 解析器（宽松但风险）
-- `auto`：自动选择（优先 JSON5，若文件格式不兼容则降级为 eval）
+用于“词条使用检查（已使用 / 未使用 / 未定义）”的代码文件扩展名范围。仅在此列表中的文件会被扫描。
 
 ## `i18n-mage.analysis.onSave`
 

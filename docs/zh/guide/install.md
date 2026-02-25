@@ -5,7 +5,7 @@
 在安装前，请确保：
 
 * VS Code 版本 ≥ **1.89.0**
-* 语言文件格式为 **JSON / JSON5 / JS / TS**
+* 项目中有可访问的语言文件目录（常见如 `locales/`、`i18n/`）
 
 ## 二、安装方式
 
@@ -53,13 +53,15 @@ code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 
 1. **活动栏图标**：出现巫师帽 🧙‍♂️ 图标
 2. **命令面板**：`Ctrl+Shift+P` 可搜索到 i18n Mage 命令
-3. **状态栏**：显示 i18n Mage 语言状态指示器（如已启用）
+3. **侧边栏视图**：可打开 `i18n Mage / Grimoire` 面板
 
 ### 快速验证命令
 
 打开命令面板（`Ctrl+Shift+P`），输入以下命令以测试：
 
-* `i18n Mage: refresh`：检测词条信息
+* `i18n Mage: Check Usage`：检测词条使用情况
+* `i18n Mage: Search`：搜索词条
+* `i18n Mage: Fix`：执行修复流程
 
 ## 五、安装问题排查
 
@@ -67,11 +69,12 @@ code --install-extension jensen-wen.i18n-mage --registry https://open-vsx.org
 
 1. **重启编辑器**
 2. **检查版本**：确认 VS Code ≥ 1.89.0
-3. **查看日志**：打开“输出”面板，选择“i18n Mage”
-4. **反馈问题**：[在 GitHub 提交 Issue](https://github.com/jensen-wen/i18n-mage/issues)
+3. **检查路径配置**：确认已配置语言目录（`i18n-mage.workspace.languagePath`）
+4. **查看日志**：打开“输出”面板，选择“i18n Mage”
+5. **开启调试日志**：临时启用 `i18n-mage.general.enableDebugLog` 后重试
+6. **反馈问题**：[在 GitHub 提交 Issue](https://github.com/baimohui/i18n-mage/issues)
 
 ## 🔗 官方安装链接
 
 * [⭐ VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=jensen-wen.i18n-mage)
 * [🌐 OpenVSX Registry](https://open-vsx.org/extension/jensen-wen/i18n-mage)
-

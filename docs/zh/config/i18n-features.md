@@ -10,8 +10,8 @@
 - `auto`: 自动检测项目使用的国际化框架
 - `vue-i18n`: 使用 `vue-i18n` 框架
 - `react-i18next`: 使用 `react-i18next` 框架
-- `i18next`: 使用 `i18next` 框架（目前选择该项与 `react-i18next` 效果相同）
-- ~~`vscode-l10n`: 使用 `vscode-l10n` 框架~~
+- `i18next`: 使用 `i18next` 框架
+- `vscode-l10n`: 使用 VS Code 扩展场景的 `vscode-l10n` 形式
 - `none`: 不使用框架
 
 ## `i18n-mage.i18nFeatures.translationFunctionNames`
@@ -81,14 +81,17 @@
 - **类型**: `enum`
 - **默认值**: `function`
 
-翻译访问方式。支持以下选项：
+指定项目中访问翻译的方式，支持以下选项：
 
-- `function`: 使用函数调用方式，如 `t('key')`
-- `object`: 使用对象访问方式，如 `t.key`
+- `function`: 通过函数调用访问翻译（如 `t('common.ok')`）
+- `object`: 通过对象访问翻译（如 `messages.common.ok` 或其他对象路径）
+
+当你的代码并不使用 `t()`，而是直接从翻译对象读取内容时，请改为 `object`，并配合下方 `translationObjectIdentifiers` 使用。
 
 ## `i18n-mage.i18nFeatures.translationObjectIdentifiers`
 
 - **类型**: `array`
 - **默认值**: `[]`
 
-使用对象的方式来访问翻译时，承载翻译数据的对象标识符。
+当 `accessMode = object` 时，用于声明“承载翻译数据的对象标识符”列表，例如：`["messages", "localeMap", "i18nData"]`。  
+插件会基于这些对象名识别和分析词条引用，避免把普通业务对象误判为翻译对象。

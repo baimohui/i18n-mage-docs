@@ -22,6 +22,8 @@
 
 ![翻译内联提示](./images/inline-hints.gif)
 
+详见：[翻译装饰](../features/translation-hints.md)
+
 ### ⚡ 智能代码补全
 * 在编写国际化函数（如 `t("...")`）时，自动联想已有翻译词条
 * 支持按 key、value 或双向匹配进行候选筛选
@@ -30,11 +32,15 @@
 
 ![补全代码](./images/completion.gif)
 
+详见：[智能代码补全](../features/completion.md)
+
 ### 🚧 缺漏翻译补充
 - 集成 DeepL、谷歌、百度、腾讯、有道、DeepSeek、ChatGPT 翻译服务
 - 自动补充缺失翻译，支持预览与人工校验
 
 ![补全缺漏翻译](./images/fill-missing-translations.gif)
+
+详见：[缺漏翻译补充](../features/fill-missing-translations.md)
 
 ### 🧩 未定义词条提取
 - 智能识别未定义词条
@@ -43,6 +49,17 @@
 
 ![修正未定义词条](./images/fix-undefined-entries.gif)
 
+详见：[未定义词条提取](../features/fix-undefined-entries.md)
+
+### 📝 硬编码文案提取
+- 扫描代码中的硬编码文本并批量提取为 i18n key
+- 自动替换源代码并写入翻译文件
+- 支持预览确认，适合存量项目改造
+
+![提取硬编码](./images/extract-hardcoded-text.gif)
+
+详见：[硬编码文案提取](../features/extract-hardcoded-texts.md)
+
 ### 🕵️ 未使用词条检测
 - 全局分析词条使用情况
 - 支持动态拼接 key 的模式匹配
@@ -50,23 +67,42 @@
 
 ![检测未使用词条](./images/check-usage.gif)
 
+详见：[未使用词条检测](../features/check-usage.md)
+
 ### 🔍 全语种文案搜索
 - 支持多语种文案搜索，快速定位目标词条
-<!-- - 支持模糊匹配与正则表达式搜索 -->
+- 支持全词匹配与大小写敏感搜索
 
 ![搜索文案](./images/search.gif)
+
+详见：[全语种文案搜索](../features/search.md)
 
 ### 📊 Excel 导入导出
 - 将翻译词条导出为 Excel 文件，供翻译团队使用
 - 从 Excel 导入翻译，自动写入语言文件
+- 支持按 Git 基线导出“版本差异”（ADD/MODIFY/DELETE）
+- 支持导入“版本差异”并回写项目
 
 ![导出 excel](./images/excel.png)
 
-### 📋 复制词条数据
-* 一键复制特定范围的词条数据
+详见：[Excel 导入导出](../features/excel.md)
+
+### 📋 跨项目词条迁移
+* 支持按文件和前缀复制词条数据到剪贴板
 * 将复制的词条粘贴到目标项目中，实现快速迁移
 
 ![复制词条数据](./images/copy-entries.gif)
+
+详见：[复制词条数据](../features/quick-operations.md)
+
+### 🔢 写入排序
+
+- 支持按词条的名称或首次出现位置进行排序
+- 支持修复后自动排序，减少无意义 diff
+
+![写入排序](./images/sorting.gif)
+
+详见：[写入排序](../features/write-sorting.md)
 
 ## 🎉 感谢支持
 
