@@ -1,10 +1,21 @@
-﻿import { defineConfig } from "vitepress";
+import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "i18n Mage",
   description: "Your multilingual assistant for VS Code projects.",
   base: "/i18n-mage-docs/",
-  head: [["link", { rel: "icon", href: "/i18n-mage-docs/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/i18n-mage-docs/favicon.ico" }],
+    ["script", {}, `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?077a0a092c6598d8d41791aa4303cda8";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    `]
+  ],
 
   locales: {
     en: {
