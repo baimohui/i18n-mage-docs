@@ -42,7 +42,6 @@ export default defineConfig({
             },
             {
               text: "Features",
-              collapsed: true,
               items: [
                 { text: "Overview", link: "/en/features/" },
                 {
@@ -127,7 +126,6 @@ export default defineConfig({
             },
             {
               text: "功能",
-              collapsed: true,
               items: [
                 { text: "总览", link: "/zh/features/" },
                 {
