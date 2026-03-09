@@ -1,4 +1,4 @@
-﻿# Write Rules Configuration
+# Write Rules Configuration
 
 ## `i18n-mage.writeRules.sortRule`
 
@@ -37,12 +37,20 @@ When `languageStructure = nested`, whether `.` is allowed in keys.
 ## `i18n-mage.writeRules.keyPrefix`
 
 - **Type**: `enum`
-- **Default**: `manual-selection`
+- **Default**: `ai-selection`
 
 - `none`
 - `manual-selection`
+- `ai-selection`
 - `auto-path`
 - `auto-popular`
+
+## `i18n-mage.writeRules.prefixCandidates`
+
+- **Type**: `string[]`
+- **Default**: `[]`
+
+Specify the list of prefix candidates to choose from. If empty, the list of prefixes actually used in the current project will be used.
 
 ## `i18n-mage.writeRules.keyStrategy`
 

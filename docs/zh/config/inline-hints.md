@@ -17,15 +17,12 @@
 - `overlay`：将翻译文本覆盖显示在原始文本上
 - `inline`：将翻译文本与原始文本并行显示
 
-## `i18n-mage.translationHints.decorationScope`
+## `i18n-mage.translationHints.fullFileMaxSizeKB`
 
-- **类型**：`enum`
-- **默认值**：`visible`
+- **类型**：`number`
+- **默认值**：`50`
 
-设置翻译装饰的应用范围：
-
-- `visible`：仅当前可见区域（性能更好，推荐）
-- `file`：整个文件（滚动到任意位置都可直接看到装饰）
+根据文件大小（单位：KB）智能切换装饰范围（≤设定值使用全文件装饰，否则仅在可见区域进行装饰。0 表示始终仅可见区域，-1 表示始终全文件）。
 
 ## `i18n-mage.translationHints.realtimeVisibleRangeUpdate`
 

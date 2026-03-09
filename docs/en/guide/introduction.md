@@ -1,4 +1,4 @@
-﻿# i18n Mage - Frontend i18n Assistant
+# i18n Mage - Frontend i18n Assistant
 
 ## Overview
 
@@ -9,7 +9,6 @@
 ### Translation Entry Overview
 - Visualize all translation entries
 - Keep language files in sync in real time
-- Track entry usage statistics
 
 ![Entry Tree Panel](./images/panel-view.png)
 
@@ -33,7 +32,7 @@ See: [Translation Hints](/en/features/translation-hints)
 See: [Completion](/en/features/completion)
 
 ### Fill Missing Translations
-- Integrates global providers (DeepL, Google, OpenAI/ChatGPT) and optional regional providers (DeepSeek, Baidu, Tencent, Youdao)
+- Integrates AI services (ChatGPT, DeepSeek, Doubao) and translation services (DeepL, Google, Baidu, Tencent, Youdao)
 - Fill missing translations automatically with preview and manual review
 
 ![Fill Missing Translations](./images/fill-missing-translations.gif)
@@ -58,15 +57,6 @@ See: [Fix Undefined Entries](/en/features/fix-undefined-entries)
 
 See: [Extract Hardcoded Texts](/en/features/extract-hardcoded-texts)
 
-### Check Unused Entries
-- Analyze global usage
-- Support dynamic key pattern matching
-- Manually mark or batch-delete unused entries
-
-![Check Usage](./images/check-usage.gif)
-
-See: [Check Usage](/en/features/check-usage)
-
 ### Multilingual Text Search
 - Search across languages to locate target entries quickly
 - Support whole-word and case-sensitive search
@@ -84,6 +74,15 @@ See: [Search](/en/features/search)
 ![Excel](./images/excel.png)
 
 See: [Excel Import/Export](/en/features/excel)
+
+### Check Unused Entries
+- Analyze global usage
+- Support dynamic key pattern matching
+- Manually mark or batch-delete unused entries
+
+![Check Usage](./images/check-usage.gif)
+
+See: [Check Usage](/en/features/check-usage)
 
 ### Cross-Project Entry Migration
 - Copy entries by file or prefix into clipboard

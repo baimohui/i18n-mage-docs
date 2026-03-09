@@ -40,14 +40,22 @@
 ## `i18n-mage.writeRules.keyPrefix`
 
 - **类型**：`enum`
-- **默认值**：`manual-selection`
+- **默认值**：`ai-selection`
 
 用于生成 key 的前缀，支持以下选项：
 
 - `none`：不添加前缀
 - `manual-selection`：手动选择前缀
+- `ai-selection`：AI 智能选择前缀
 - `auto-path`：根据文件路径自动生成前缀
 - `auto-popular`：自动选择最常见前缀
+
+## `i18n-mage.writeRules.prefixCandidates`
+
+- **类型**：`string[]`
+- **默认值**：`[]`
+
+指定可以选择的前缀候选列表。若为空，则使用当前项目中实际使用的前缀列表。
 
 ## `i18n-mage.writeRules.keyStrategy`
 

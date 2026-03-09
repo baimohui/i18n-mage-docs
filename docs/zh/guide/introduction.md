@@ -11,7 +11,6 @@
 ### 🌳 翻译词条总览
 - 可视化查看所有翻译词条
 - 实时同步各语言文件状态
-- 词条使用情况统计
 
 ![词条树视图信息](./images/panel-view.png)
 
@@ -35,7 +34,7 @@
 详见：[智能代码补全](../features/completion.md)
 
 ### 🚧 缺漏翻译补充
-- 集成 DeepL、谷歌、百度、腾讯、有道、DeepSeek、ChatGPT 翻译服务
+- 集成 DeepSeek、ChatGPT、豆包等 AI 服务和 DeepL、谷歌、百度、腾讯、有道等翻译服务
 - 自动补充缺失翻译，支持预览与人工校验
 
 ![补全缺漏翻译](./images/fill-missing-translations.gif)
@@ -60,15 +59,6 @@
 
 详见：[硬编码文案提取](../features/extract-hardcoded-texts.md)
 
-### 🕵️ 未使用词条检测
-- 全局分析词条使用情况
-- 支持动态拼接 key 的模式匹配
-- 可手动标记或批量删除未使用词条
-
-![检测未使用词条](./images/check-usage.gif)
-
-详见：[未使用词条检测](../features/check-usage.md)
-
 ### 🔍 全语种文案搜索
 - 支持多语种文案搜索，快速定位目标词条
 - 支持全词匹配与大小写敏感搜索
@@ -87,13 +77,22 @@
 
 详见：[Excel 导入导出](../features/excel.md)
 
+### 🕵️ 未使用词条检测
+- 全局分析词条使用情况
+- 支持动态拼接 key 的模式匹配
+- 可手动标记或批量删除未使用词条
+
+![检测未使用词条](./images/check-usage.gif)
+
+详见：[未使用词条检测](../features/check-usage.md)
+
 ### 📋 跨项目词条迁移
-* 支持按文件和前缀复制词条数据到剪贴板
+* 支持按文件或前缀复制词条数据到剪贴板
 * 将复制的词条粘贴到目标项目中，实现快速迁移
 
-![复制词条数据](./images/copy-entries.gif)
+![跨项目词条迁移](./images/copy-entries.gif)
 
-详见：[复制词条数据](../features/quick-operations.md)
+详见：[跨项目词条迁移](../features/quick-operations.md)
 
 ### 🔢 写入排序
 

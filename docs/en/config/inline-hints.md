@@ -1,4 +1,4 @@
-﻿# Inline Hints Configuration
+# Inline Hints Configuration
 
 ## `i18n-mage.translationHints.enable`
 
@@ -15,13 +15,12 @@ Enable translation inline hints.
 - `overlay`: overlay translation on original text
 - `inline`: show translation beside original text
 
-## `i18n-mage.translationHints.decorationScope`
+## `i18n-mage.translationHints.fullFileMaxSizeKB`
 
-- **Type**: `enum`
-- **Default**: `visible`
+- **Type**: `number`
+- **Default**: `50`
 
-- `visible`: visible range only (recommended)
-- `file`: whole file
+Intelligently switch decoration scope based on file size (in KB). Files ≤ the set value use full-file decoration, otherwise only the visible range is decorated. 0 means always visible range only, -1 means always full file.
 
 ## `i18n-mage.translationHints.realtimeVisibleRangeUpdate`
 

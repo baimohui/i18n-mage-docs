@@ -1,4 +1,4 @@
-﻿# Extract Hardcoded Texts Configuration
+# Extract Hardcoded Texts Configuration
 
 This page documents settings directly related to "Extract Hardcoded Texts".
 
@@ -72,6 +72,16 @@ This page documents settings directly related to "Extract Hardcoded Texts".
 - Type: `string[]`
 - Default: `["key", "ref", "prop", "value", "class", "style", "id", "for", "type", "name", "src", "href", "to"]`
 - Description: Vue template attribute blacklist.
+
+### `i18n-mage.extract.ignoreTexts`
+- Type: `string[]`
+- Default: `[]`
+- Description: List of text contents to ignore. Matching texts will not be extracted.
+
+### `i18n-mage.extract.ignoreCallExpressionCallees`
+- Type: `string[]`
+- Default: `[]`
+- Description: List of callees in function call expressions to ignore. Matching function calls will not be extracted.
 
 ## Related Settings
 

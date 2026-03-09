@@ -29,8 +29,8 @@
 - `i18n-mage.translationHints.displayMode`  
   装饰显示方式：`overlay`（覆盖显示）或 `inline`（并行显示）。
 
-- `i18n-mage.translationHints.decorationScope`  
-  装饰范围：`visible`（仅可见区域，性能更好）或 `file`（整个文件）。
+- `i18n-mage.translationHints.fullFileMaxSizeKB`  
+  装饰范围：根据文件大小智能切换装饰范围（≤设定值使用全文件装饰，否则仅在可见区域进行装饰。0 表示始终仅可见区域，-1 表示始终全文件）。
 
 - `i18n-mage.translationHints.realtimeVisibleRangeUpdate`  
   在 `visible` 模式下滚动时是否实时更新装饰。开启后更实时，但可能增加 CPU 占用。

@@ -1,4 +1,4 @@
-﻿# Translation Hints
+# Translation Hints
 
 ## What It Does
 
@@ -25,7 +25,8 @@ Translation hints render translated text directly in the editor, reducing contex
 
 - `i18n-mage.translationHints.enable`
 - `i18n-mage.translationHints.displayMode` (`overlay` / `inline`)
-- `i18n-mage.translationHints.decorationScope` (`visible` / `file`)
+- `i18n-mage.translationHints.fullFileMaxSizeKB`
+  Decoration scope: intelligently switch based on file size (files ≤ the set value use full-file decoration, otherwise only the visible range is decorated. 0 means always visible range only, -1 means always full file).
 - `i18n-mage.translationHints.realtimeVisibleRangeUpdate`
 - `i18n-mage.translationHints.applyToStringLiterals`
 - `i18n-mage.translationHints.enableLooseKeyMatch`

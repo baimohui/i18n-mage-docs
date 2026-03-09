@@ -45,6 +45,11 @@
 - 默认值：`[]`
 - 说明：JS/TS 需要插入的初始化语句（多行数组）。
 
+### `i18n-mage.extract.skipJsTsInjection`
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否跳过 JS/TS 文件的导入和初始化注入。
+
 ### `i18n-mage.extract.vueScriptImportLines`
 - 类型：`string[]`
 - 默认值：`[]`
@@ -54,6 +59,11 @@
 - 类型：`string[]`
 - 默认值：`[]`
 - 说明：Vue Script 需要插入的初始化语句（多行数组）。
+
+### `i18n-mage.extract.skipVueScriptInjection`
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否跳过 Vue Script 文件的导入和初始化注入。
 
 ## 提取过滤规则
 
@@ -71,6 +81,16 @@
 - 类型：`string[]`
 - 默认值：`["key", "ref", "prop", "value", "class", "style", "id", "for", "type", "name", "src", "href", "to"]`
 - 说明：Vue Template 属性提取黑名单。命中属性会被排除。
+
+### `i18n-mage.extract.ignoreTexts`
+- 类型：`string[]`
+- 默认值：`[]`
+- 说明：指定要忽略的文本内容列表。匹配到的文本将不会被提取。
+
+### `i18n-mage.extract.ignoreCallExpressionCallees`
+- 类型：`string[]`
+- 默认值：`[]`
+- 说明：指定要忽略的函数调用表达式中的 callee 列表。匹配到的函数调用将不会被提取。
 
 ## 相关配置
 - `i18n-mage.i18nFeatures.framework`：影响提取向导中的框架行为和代码模板。
