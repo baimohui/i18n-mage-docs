@@ -34,7 +34,8 @@
 详见：[智能代码补全](../features/completion.md)
 
 ### 🚧 缺漏翻译补充
-- 集成 DeepSeek、ChatGPT、豆包等 AI 服务和 DeepL、谷歌、百度、腾讯、有道等翻译服务
+- 集成 OpenAI、DeepSeek、豆包、千问、混元和 Kimi 等 AI 服务
+- 集成 DeepL、谷歌翻译、百度翻译、腾讯翻译和有道翻译等机器翻译服务
 - 自动补充缺失翻译，支持预览与人工校验
 
 ![补全缺漏翻译](./images/fill-missing-translations.gif)

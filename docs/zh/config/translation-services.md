@@ -82,6 +82,152 @@
 
 设置使用的翻译服务及优先级。如果调用某个翻译平台时出现异常，插件会自动切换到下一个可用的翻译平台。
 
+## `i18n-mage.translationServices.customProviders`
+
+- **类型**：`array`
+- **默认值**：`[]`
+
+自定义 OpenAI 兼容 AI 服务配置列表，用于接入插件未内置的服务。配置后，需要在翻译服务优先级中使用 `custom:<id>` 来启用该服务。
+
+每个配置项包含以下字段：
+
+- `id`：服务标识（仅支持字母、数字、`-`、`_`、`.`），最终会被转换为 `custom:<id>`
+- `baseUrl`：Chat Completions 接口地址（例如 `https://xxx/v1/chat/completions`）
+- `apiKey`：服务 API Key
+- `model`：默认模型名（若在 `translateApiPriority` 中启用该服务则必填）
+- `enabled`：是否启用该服务（可选，默认 `true`）
+- `useProxy`：是否使用插件代理配置（可选，默认 `true`）
+- `translateBatchConfig`：翻译批处理配置（可选）
+- `generateBatchConfig`：生成 key 批处理配置（可选）
+
+示例：
+
+```json
+{
+  "i18n-mage.translationServices.customProviders": [
+    {
+      "id": "acme",
+      "baseUrl": "https://api.acme.com/v1/chat/completions",
+      "apiKey": "YOUR_API_KEY",
+      "model": "acme-chat",
+      "enabled": true,
+      "useProxy": true,
+      "translateBatchConfig": {
+        "maxLen": 4000,
+        "batchSize": 20,
+        "interval": 800
+      },
+      "generateBatchConfig": {
+        "maxLen": 2000,
+        "batchSize": 10,
+        "interval": 1100
+      }
+    }
+  ],
+  "i18n-mage.translationServices.translateApiPriority": [
+    "custom:acme",
+    "chatgpt",
+    "google"
+  ]
+}
+```
+
+注意：
+- `id` 重复时仅保留第一个配置
+- `enabled: false` 的配置会被忽略
+- `translateApiPriority` 中不存在的 `custom:*` 会被自动忽略
+
+## `i18n-mage.translationServices.aiCustomPrompt`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+追加给 AI 翻译上下文的自定义提示词。可用于约束语气、专业术语、品牌词和风格一致性。  
+建议写成简洁规则，例如：“保留变量占位符，不要翻译品牌名，偏产品文案语气”。
+
+## `i18n-mage.translationServices.openaiApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置 OpenAI API 密钥。
+
+## `i18n-mage.translationServices.openaiModel`
+
+- **类型**：`string`
+- **默认值**：`gpt-4o-mini`
+
+设置 OpenAI API 模型。
+
+## `i18n-mage.translationServices.deepseekApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置 DeepSeek API 密钥。
+
+## `i18n-mage.translationServices.deepseekModel`
+
+- **类型**：`string`
+- **默认值**：`deepseek-chat`
+
+设置 DeepSeek API 模型。
+
+## `i18n-mage.translationServices.doubaoApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置豆包 API 密钥。
+
+## `i18n-mage.translationServices.doubaoModel`
+
+- **类型**：`string`
+- **默认值**：`doubao-seed-1-8-251228`
+
+设置豆包 API 模型。
+
+## `i18n-mage.translationServices.qwenApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置千问 API 密钥。
+
+## `i18n-mage.translationServices.qwenModel`
+
+- **类型**：`string`
+- **默认值**：`qwen-plus`
+
+设置千问 API 模型。
+
+## `i18n-mage.translationServices.hunyuanApiKey`
+
+- **类型**：`string`
+- **默认值**：`""`
+
+设置混元 API 密钥。
+
+## `i18n-mage.translationServices.hunyuanModel`
+
+- **类型**：`string`
+- **默认值**：`hunyuan-turbos-latest`
+
+设置混元 API 模型。
+
+## `i18n-mage.translationServices.kimiApiKey`
+- **类型**：`string`
+- **默认值**：`""`
+
+设置 KIMI API 密钥。
+
+## `i18n-mage.translationServices.kimiModel`
+
+- **类型**：`string`
+- **默认值**：`moonshot-v1-8k`
+
+设置 KIMI API 模型。
+
 ## `i18n-mage.translationServices.deeplVersion`
 
 - **类型**：`string`
@@ -105,20 +251,6 @@
 - **默认值**：`""`
 
 设置 Google 翻译 API 密钥。
-
-## `i18n-mage.translationServices.openaiApiKey`
-
-- **类型**：`string`
-- **默认值**：`""`
-
-设置 OpenAI API 密钥（用于 ChatGPT 翻译与 AI 生成 key 能力）。
-
-## `i18n-mage.translationServices.deepseekApiKey`
-
-- **类型**：`string`
-- **默认值**：`""`
-
-设置 DeepSeek 翻译 API 密钥。
 
 ## `i18n-mage.translationServices.baiduAppId`
 
@@ -193,11 +325,5 @@
 - `http`
 - `https`
 
-## `i18n-mage.translationServices.aiCustomPrompt`
 
-- **类型**：`string`
-- **默认值**：`""`
-
-追加给 AI 翻译上下文的自定义提示词。可用于约束语气、专业术语、品牌词和风格一致性。  
-建议写成简洁规则，例如：“保留变量占位符，不要翻译品牌名，偏产品文案语气”。
 

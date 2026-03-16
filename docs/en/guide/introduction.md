@@ -32,7 +32,8 @@ See: [Translation Hints](/en/features/translation-hints)
 See: [Completion](/en/features/completion)
 
 ### Fill Missing Translations
-- Integrates AI services (ChatGPT, DeepSeek, Doubao) and translation services (DeepL, Google, Baidu, Tencent, Youdao)
+- Integrates AI services (OpenAI, DeepSeek, Doubao, Qwen, Hunyuan, and Kimi)
+- Integrates machine translation services (DeepL, Google Translate, Baidu Translate, Tencent Translate, and Youdao Translate)
 - Fill missing translations automatically with preview and manual review
 
 ![Fill Missing Translations](./images/fill-missing-translations.gif)

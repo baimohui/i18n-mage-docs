@@ -12,11 +12,19 @@
 
 4. 腾讯翻译：翻译质量良好，调用 API 服务前需要先访问[腾讯云控制台](https://console.cloud.tencent.com/cam)进行注册登录，腾讯翻译拥有每月 500 万字符的免费调用额度，并支持 17 种语言。
 
-5. DeepSeek：AI 翻译质量高，支持多语言，调用 API 服务前除了需要先在[DeepSeek 官网](https://platform.deepseek.com)注册账号外，还需要进行充值（每百万 tokens 输入预计仅花费 0.5 元到 2 元）。由于 AI 输出结果存在一定随机性，不建议用其一次性翻译数量较多的文案，以免文案匹配出错。
+5. DeepSeek：AI 翻译质量高，支持多语言，调用 API 服务前除了需要先在[DeepSeek 官网](https://platform.deepseek.com)注册账号外，还需要进行充值（每百万 tokens 输入预计仅花费 0.5 元到 2 元）。
 
 6. ChatGPT：支持多语言，翻译效果自然流畅，需在 [OpenAI 平台](https://platform.openai.com) 注册并获取 API Key 使用，按调用量计费，适合需自定义翻译逻辑的场景。
 
 7. 有道翻译：支持 110+ 种语言，提供免费体验与付费套餐，调用前需在[有道翻译开放平台](https://fanyi.youdao.com/openapi)注册应用获取密钥，兼具文本、图片及语音翻译功能。
+
+8. 豆包：字节跳动推出的 AI 翻译服务，支持多语言，调用 API 服务前需先在[豆包大模型开放平台](https://www.volcengine.com/docs/9980)注册并获取 API Key，按调用量计费。
+
+9. 千问：阿里云推出的 AI 翻译服务，支持多语言，调用 API 服务前需先在[千问大模型平台](https://dashscope.console.aliyun.com)注册并获取 API Key，按调用量计费。
+
+10. 混元：腾讯推出的 AI 翻译服务，支持多语言，调用 API 服务前需先在[混元大模型平台](https://cloud.tencent.com/product/hunyuan)注册并获取 API Key，按调用量计费。
+
+11. Kimi：月之暗面推出的 AI 翻译服务，支持多语言，调用 API 服务前需先在[Kimi 开放平台](https://platform.moonshot.cn)注册并获取 API Key，按调用量计费。
 
 ## Q：词条支持哪些引入方式？
 

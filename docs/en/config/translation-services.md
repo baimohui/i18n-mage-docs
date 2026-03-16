@@ -1,4 +1,4 @@
-﻿# Translation Services Configuration
+# Translation Services Configuration
 
 ## `i18n-mage.translationServices.autoTranslateMissingKey`
 
@@ -77,12 +77,69 @@ Custom language alias mappings.
 - **Type**: `array`
 - **Default**: `[ "deepl", "chatgpt", "deepseek", "baidu", "tencent", "youdao", "google" ]`
 
-Translation provider priority order.
+Translation provider priority order. If one provider fails, the plugin will automatically switch to the next available provider.
 
-Recommended baseline for users outside Mainland China:
+## `i18n-mage.translationServices.customProviders`
 
-- Prioritize `deepl`, `chatgpt`, and `google`
-- Add regional providers only when needed by your team or network environment
+- **Type**: `array`
+- **Default**: `[]`
+
+Custom OpenAI-compatible AI service configuration list. After configuration, enable the service using `custom:<id>` in `translateApiPriority`.
+
+Each configuration contains:
+
+- `id`: Service identifier (letters, numbers, `-`, `_`, `.` only), will be converted to `custom:<id>`
+- `baseUrl`: Chat Completions API address (e.g., `https://xxx/v1/chat/completions`)
+- `apiKey`: Service API Key
+- `model`: Default model name (required if enabled in `translateApiPriority`)
+- `enabled`: Whether to enable (optional, default `true`)
+- `useProxy`: Whether to use plugin proxy config (optional, default `true`)
+- `translateBatchConfig`: Translation batch config (optional)
+- `generateBatchConfig`: Key generation batch config (optional)
+
+Example:
+
+```json
+{
+  "i18n-mage.translationServices.customProviders": [
+    {
+      "id": "acme",
+      "baseUrl": "https://api.acme.com/v1/chat/completions",
+      "apiKey": "YOUR_API_KEY",
+      "model": "acme-chat",
+      "enabled": true,
+      "useProxy": true,
+      "translateBatchConfig": {
+        "maxLen": 4000,
+        "batchSize": 20,
+        "interval": 800
+      },
+      "generateBatchConfig": {
+        "maxLen": 2000,
+        "batchSize": 10,
+        "interval": 1100
+      }
+    }
+  ],
+  "i18n-mage.translationServices.translateApiPriority": [
+    "custom:acme",
+    "chatgpt",
+    "google"
+  ]
+}
+```
+
+Note:
+- Duplicate `id` values will only keep the first configuration
+- Configurations with `enabled: false` will be ignored
+- Non-existent `custom:*` in `translateApiPriority` will be automatically ignored
+
+## `i18n-mage.translationServices.aiCustomPrompt`
+
+- **Type**: `string`
+- **Default**: `""`
+
+Custom prompt appended to AI translation context. Can be used to constrain tone, professional terminology, brand names, and style consistency. Write as concise rules, e.g., "Keep variable placeholders, don't translate brand names, use a product copy tone".
 
 ## `i18n-mage.translationServices.deeplVersion`
 
@@ -98,10 +155,20 @@ Global providers:
 - `i18n-mage.translationServices.deeplApiKey`
 - `i18n-mage.translationServices.googleApiKey`
 - `i18n-mage.translationServices.openaiApiKey`
+- `i18n-mage.translationServices.openaiModel`
+- `i18n-mage.translationServices.deepseekApiKey`
+- `i18n-mage.translationServices.deepseekModel`
+- `i18n-mage.translationServices.doubaoApiKey`
+- `i18n-mage.translationServices.doubaoModel`
+- `i18n-mage.translationServices.qwenApiKey`
+- `i18n-mage.translationServices.qwenModel`
+- `i18n-mage.translationServices.hunyuanApiKey`
+- `i18n-mage.translationServices.hunyuanModel`
+- `i18n-mage.translationServices.kimiApiKey`
+- `i18n-mage.translationServices.kimiModel`
 
 Optional regional providers:
 
-- `i18n-mage.translationServices.deepseekApiKey`
 - `i18n-mage.translationServices.baiduAppId`
 - `i18n-mage.translationServices.baiduSecretKey`
 - `i18n-mage.translationServices.tencentSecretId`
@@ -130,9 +197,3 @@ Use proxy settings only when your company or environment requires outbound proxy
 - **Default**: `http`
 - Options: `http`, `https`
 
-## `i18n-mage.translationServices.aiCustomPrompt`
-
-- **Type**: `string`
-- **Default**: `""`
-
-Custom prompt appended to AI translation context.
