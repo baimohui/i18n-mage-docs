@@ -28,7 +28,7 @@ Extract hardcoded texts replaces literal UI text in source code with i18n calls 
 - `i18n-mage.i18nFeatures.framework`
 - `i18n-mage.writeRules.*`
 - `i18n-mage.translationServices.referenceLanguage`
-- `i18n-mage.general.previewChanges`
+- `i18n-mage.general.previewChangeScopes`
 
 ## FAQ
 

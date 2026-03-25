@@ -29,7 +29,7 @@ Excel sync supports round-trip collaboration between locale files and spreadshee
 ## Related Settings
 
 - `i18n-mage.general.sortOnExport`
-- `i18n-mage.general.previewChanges`
+- `i18n-mage.general.previewChangeScopes`
 - `i18n-mage.workspace.projectPath`
 - `i18n-mage.workspace.languagePath`
 

@@ -34,7 +34,7 @@ When a key has a value in the reference language but is missing or empty in othe
 - `i18n-mage.translationServices.unmatchedLanguageAction`
 - `i18n-mage.translationServices.proxy.*`
 - `i18n-mage.translationServices.aiCustomPrompt`
-- `i18n-mage.general.previewChanges`
+- `i18n-mage.general.previewChangeScopes`
 
 Provider note:
 
@@ -45,5 +45,5 @@ Provider note:
 
 - Some keys were not filled: source value may be missing, or selected scope excluded them.
 - Translation failed: usually API key/quota/network/provider issues.
-- No preview shown: check `i18n-mage.general.previewChanges`.
+- No preview shown: check `i18n-mage.general.previewChangeScopes`.
 

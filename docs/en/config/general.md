@@ -7,12 +7,12 @@
 
 Enable or disable the main i18n Mage functionality. When disabled, extension views, checks, and commands stop working.
 
-## `i18n-mage.general.previewChanges`
+## `i18n-mage.general.previewChangeScopes`
 
-- **Type**: `boolean`
-- **Default**: `true`
+- **Type**: `array`
+- **Default value**: `["fix", "rewrite", "retranslate", "excel-import", "paste-entries", "hardcoded-extract"]`
 
-Whether to show a preview panel before batch-changing language files (for example in fix/import operations).
+Whether to display the preview panel before applying changes for the corresponding change scopes. It is recommended to keep this enabled to avoid accidentally modifying a large number of entries.
 
 ## `i18n-mage.general.enableDiagnostics`
 

@@ -58,7 +58,7 @@
 - `i18n-mage.translationServices.unmatchedLanguageAction`  
   当语言校验失败时的处理策略：`ignore` / `force` / `fill` / `switch` / `query`。
 
-- `i18n-mage.general.previewChanges`  
+- `i18n-mage.general.previewChangeScopes`  
   是否在真正写入前展示预览，建议开启。
 
 - `i18n-mage.translationServices.proxy.enable`、`proxy.host`、`proxy.port`、`proxy.protocol`  
@@ -86,4 +86,4 @@
   通常是 API Key 无效、额度不足、网络不可达或该服务暂时异常。可调整 `translateApiPriority` 让插件自动切换到下一个服务。
 
 - 为什么没有弹出预览？  
-  检查 `i18n-mage.general.previewChanges` 是否关闭。
+  检查 `i18n-mage.general.previewChangeScopes` 是否关闭。

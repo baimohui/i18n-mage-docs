@@ -106,7 +106,7 @@
    - 根据 `keyGenerationFillScope` 配置决定翻译范围  
 
 8. **预览和确认**(如果启用了预览)
-   - 如果启用了 `i18n-mage.general.previewChanges`,会显示待应用的更改  
+   - 如果启用了 `i18n-mage.general.previewChangeScopes`,会显示待应用的更改  
    - 包括源文件的修改和语言文件的新增词条
 
 ![修复未定义词条](../guide/images/fix-undefined-entries.gif)

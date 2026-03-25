@@ -16,15 +16,10 @@
 - 默认值：`[]`
 - 说明：手动标记为“已使用”的词条列表。
 
-## `i18n-mage.workspace.ignoredFiles`
+## `i18n-mage.workspace.ignoredPaths`
 - 类型：`string[]`
 - 默认值：`[]`
-- 说明：忽略扫描的文件列表。
-
-## `i18n-mage.workspace.ignoredDirectories`
-- 类型：`string[]`
-- 默认值：`[]`
-- 说明：忽略扫描的目录列表。
+- 说明：忽略扫描的路径列表，支持文件和目录路径。
 
 ## `i18n-mage.workspace.ignoredLanguages`
 - 类型：`string[]`

@@ -42,7 +42,7 @@ Undefined entries occur when code references text in `t(...)` but no matching ke
 - `i18n-mage.writeRules.keyPrefix`
 - `i18n-mage.writeRules.maxKeyLength`
 - `i18n-mage.writeRules.stopWords`
-- `i18n-mage.general.previewChanges`
+- `i18n-mage.general.previewChangeScopes`
 
 ## Tips
 

@@ -31,8 +31,7 @@ You can also enable auto-check on save.
 - `i18n-mage.analysis.ignoreCommentedCode`
 - `i18n-mage.analysis.syncBasedOnReferredEntries`
 - `i18n-mage.analysis.fileSizeSkipThresholdKB`
-- `i18n-mage.workspace.ignoredDirectories`
-- `i18n-mage.workspace.ignoredFiles`
+- `i18n-mage.workspace.ignoredPaths`
 
 ## Tips
 

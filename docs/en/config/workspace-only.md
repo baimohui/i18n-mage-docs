@@ -17,15 +17,10 @@ The settings below are workspace-only (`scope: resource`) and should not be writ
 - Default: `[]`
 - Description: entries manually marked as used.
 
-## `i18n-mage.workspace.ignoredFiles`
+## `i18n-mage.workspace.ignoredPaths`
 - Type: `string[]`
-- Default: `[]`
-- Description: files excluded from scanning.
-
-## `i18n-mage.workspace.ignoredDirectories`
-- Type: `string[]`
-- Default: `[]`
-- Description: directories excluded from scanning.
+- Default value: `[]`
+- Description: List of paths to ignore during scanning, supports both file and directory paths.
 
 ## `i18n-mage.workspace.ignoredLanguages`
 - Type: `string[]`

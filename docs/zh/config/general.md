@@ -7,12 +7,12 @@
 
 是否启用 i18n Mage 主功能。关闭后，插件相关视图、检测和操作命令都不会继续工作。
 
-## `i18n-mage.general.previewChanges`
+## `i18n-mage.general.previewChangeScopes`
 
-- **类型**: `boolean`
-- **默认值**: `true`
+- **类型**：`array`
+- **默认值**：`["fix", "rewrite", "retranslate", "excel-import", "paste-entries", "hardcoded-extract"]`
 
-是否在“修复 / 导入”等会批量改动语言文件的操作前展示预览面板。建议保持开启，避免误改大量词条。
+是否在对应类型变更写入前展示预览面板。建议保持开启，避免误改大量词条。
 
 ## `i18n-mage.general.enableDiagnostics`
 
